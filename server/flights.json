@@ -1,0 +1,97 @@
+{
+  "connections": [
+    {
+      "origin": {
+        "code": "WAW",
+        "name": "Warsaw"
+      },
+      "timeAtOrigin": "16:45",
+      "destination": {
+        "code": "JFK",
+        "name": "New York"
+      },
+      "timeAtDestination": "20:50",
+      "stops": []
+    },
+    {
+      "origin": {
+        "code": "WAW",
+        "name": "Warsaw"
+      },
+      "timeAtOrigin": "10:20",
+      "destination": {
+        "code": "JFK",
+        "name": "New York"
+      },
+      "timeAtDestination": "21:50",
+      "stops": [
+        {
+          "code": "FRA",
+          "name": "Frankfurt"
+        }
+      ]
+    },
+    {
+      "origin": {
+        "code": "WAW",
+        "name": "Warsaw"
+      },
+      "timeAtOrigin": "12:20",
+      "destination": {
+        "code": "JFK",
+        "name": "New York"
+      },
+      "timeAtDestination": "22:15",
+      "stops": [
+        {
+          "code": "MUC",
+          "name": "Munic"
+        }
+      ]
+    },
+    {
+      "origin": {
+        "code": "WAW",
+        "name": "Warsaw"
+      },
+      "timeAtOrigin": "07:30",
+      "destination": {
+        "code": "JFK",
+        "name": "New York"
+      },
+      "timeAtDestination": "23:15",
+      "stops": [
+        {
+          "code": "MUC",
+          "name": "Munic"
+        },
+        {
+          "code": "LHR",
+          "name": "London"
+        }
+      ]
+    }
+  ],
+  "airports": [
+    {
+      "code": "MUC",
+      "name": "Munic"
+    },
+    {
+      "code": "LHR",
+      "name": "London"
+    },
+    {
+      "code": "JFK",
+      "name": "New York"
+    },
+    {
+      "code": "WAW",
+      "name": "Warsaw"
+    },
+    {
+      "code": "FRA",
+      "name": "Frankfurt"
+    }
+  ]
+}
