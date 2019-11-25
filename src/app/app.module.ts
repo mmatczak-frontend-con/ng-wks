@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {FlightModule} from './flight/flight.module';
 import {RouterModule} from '@angular/router';
 import {FlightOverviewComponent} from './flight/components/flight-overview/flight-overview.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import {FlightOverviewComponent} from './flight/components/flight-overview/fligh
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FlightModule,
     RouterModule.forRoot([
       {path: '', redirectTo: '/flights', pathMatch: 'full'},

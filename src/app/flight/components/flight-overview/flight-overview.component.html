@@ -2,3 +2,6 @@
   [value]="searchCriteria"
   (valueChange)="search($event)"
 ></fla-flight-search-criteria>
+<fla-flight-results
+  [value]="results$ | async">
+</fla-flight-results>

@@ -1,0 +1,7 @@
+<input type="text"
+       [formControl]="airportFormControl"
+       class="form-control"
+       (blur)="onTouchedFn()"
+       [ngbTypeahead]="searchAirports"
+       [resultFormatter]="formatter"
+       [inputFormatter]="formatter">

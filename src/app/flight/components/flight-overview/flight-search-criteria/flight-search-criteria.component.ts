@@ -1,6 +1,10 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {SearchCriteria} from '../../../model/search-criteria';
 import {FormControl, FormGroup} from '@angular/forms';
+import {Observable, of} from 'rxjs';
+import {FlightService} from '../../../services/flight.service';
+import {Airport} from '../../../model/flight-connection';
+import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
 
 @Component({
   selector: 'fla-flight-search-criteria',
@@ -9,17 +13,22 @@ import {FormControl, FormGroup} from '@angular/forms';
 })
 export class FlightSearchCriteriaComponent {
   @Input()
-  value: SearchCriteria;
+  set value(newValue: SearchCriteria) {
+    if (newValue) {
+      this.searchForm.patchValue(newValue);
+    }
+  }
 
   @Output()
   valueChange = new EventEmitter<SearchCriteria>();
 
   searchForm: FormGroup;
 
-  constructor() {
+
+  constructor(private flights: FlightService) {
     this.searchForm = new FormGroup({
-      source: new FormControl('dfdsd'),
-      destination: new FormControl('fdsfdss')
+      source: new FormControl(''),
+      destination: new FormControl('')
     });
   }
 
